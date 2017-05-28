@@ -15,24 +15,39 @@
     <h1 class="pink-text accent-4">  <i class="material-icons">class</i>Mi Bitácora</h1>
     <p class="deep-purple-text accent-1 flow-text">"Publish anything", just in you browser.</p>
   </header>
-<!-- En esta seccion se encuentra el Fixed Action Button-->
+  <!-- En esta seccion se encuentra el Fixed Action Button-->
   <section>
     <div class="fixed-action-btn horizontal click-to-toggle">
       <a class="btn-floating btn-large pink darken-4">
         <i class="large material-icons">mode_edit</i>
       </a>
       <ul>
-        <li><a class="btn deep-purple lighten-1 btn-floating" href="#"><i class="material-icons">chat</i></a></li>
+        <li><a class="btn deep-purple lighten-1 btn-floating modal-tigger" href="#modal1"><i class="material-icons">chat</i></a></li>
         <li><a class="btn blue accent-2 btn-floating" href="#"><i class="material-icons">perm_media</i></a></li>
         <li><a class="btn pink accent-2 btn-floating" href="#"><i class="material-icons">today</i></a></li>
         <li><a class="btn teal accent-3 btn-floating" href="#"><i class="material-icons">video_library</i></a></li>
       </ul>
     </div>
+    <!--modal mensajes-->
+    <div id="modal1" class="modal">
+      <div class="modal-content">
+        <h4>Primeras pruebas con Modal</h4>
+        <p>wiii funciona =D</p>
+      </div>
+
   </section>
+
+
 
   <!--Import jQuery before materialize.js-->
   <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
   <script type="text/javascript" src="js/materialize.min.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function() {
+      // the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
+      $('.modal').modal();
+    });
+  </script>
 
 </body>
 
