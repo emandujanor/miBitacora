@@ -15,6 +15,9 @@
     <h1 class="pink-text accent-4">  <i class="material-icons">class</i>Mi Bitácora</h1>
     <p class="deep-purple-text accent-1 flow-text">"Publish anything", just in you browser.</p>
   </header>
+  <section class="container" id="mensajesPublicados">
+
+  </section>
   <!-- En esta seccion se encuentra el Fixed Action Button-->
   <section>
     <div class="fixed-action-btn horizontal click-to-toggle">
@@ -30,10 +33,24 @@
     </div>
     <!--modal mensajes-->
     <div id="modal1" class="modal">
-      <div class="modal-content">
-        <h4>Primeras pruebas con Modal</h4>
-        <p>wiii funciona =D</p>
-      </div>
+        <div class="modal-content row">
+            <div class="col s12">
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input id="mensajeTitulo" type="text" class="validate" data-length="10" />
+                        <label for="title">Título</label>
+                    </div>
+                    <div class="input-field col s12">
+                        <textarea id="mensajeIngresado" class="materialize-textarea"></textarea>
+                        <label for="message">Mensaje</label>
+                    </div>
+                    <button id="mensajePublicar" class="btn waves-effect waves-light right pink accent-4" type="submit" name="action" data-publication="text">Publicar
+                        <i class="material-icons right">send</i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
 
   </section>
 
@@ -42,6 +59,7 @@
   <!--Import jQuery before materialize.js-->
   <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
   <script type="text/javascript" src="js/materialize.min.js"></script>
+  <script type="text/javascript" src="js/app.js"></script>
   <script type="text/javascript">
     $(document).ready(function() {
       // the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
